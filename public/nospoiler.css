@@ -1,0 +1,22 @@
+:root{
+    --blur-size: 1px;
+}
+
+.noSpoiler {
+     position: relative;
+}
+
+.noSpoiler > .noSpoilerOverlay {
+    backdrop-filter: blur(var(--blur-size));
+    z-index: 1000 !important;
+    height: 100px;
+    pointer-events: all !important;
+}
+
+.noSpoilerOverlay {
+    position: absolute;
+    z-index: -1000;
+    height: 100% !important;
+    width: 100% !important;
+    pointer-events: none !important;
+}

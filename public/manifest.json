@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+
+  "name": "CyclingTips No spoiler mode",
+  "description": "CyclingTips No spoiler mode",
+  "version": "1.0",
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+
+  "action": {
+    "default_icon": "icon32.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+      {
+          "matches": ["https://*.cyclingtips.com/*"],
+          "js": ["js/vendor.js", "js/content_script.js"],
+          "css": ["nospoiler.css"]
+      }
+  ],
+  "permissions": [
+    "storage"
+  ],
+
+  "host_permissions": []
+}
